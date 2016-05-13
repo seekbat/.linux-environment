@@ -5,7 +5,7 @@
 # ------------------------------------------------------------------
 
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|*-256color|screen) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -33,9 +33,9 @@ if [ "$color_prompt" = yes ]; then
         LIGHTBLUE="\[\033[1;34m\]"
         DEFAULTC="\[\033[0m\]"
 
-        PS1="$DEFAULTC[$LIGHTBLUE\t$DEFAULTC] $LIGHTGREY\u$DEAFULTC@$LIGHTGREY\h$DEFAULTC \w \$"
+        PS1="$DEFAULTC[$LIGHTBLUE\t$DEFAULTC] $LIGHTGREY\u$DEAFULTC@$LIGHTGREY\h$DEFAULTC \w\$"
 else
-        PS1="[\t]\u@\h \w \$"
+        PS1="[\t]\u@\h \w\$"
 fi
 unset color_prompt force_color_prompt
 
